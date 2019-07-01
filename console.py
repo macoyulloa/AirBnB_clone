@@ -17,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
         return(True)
 
     def emptyline(self):
-        "If there is an empty line, just pass"
+        "If there is an empty line, it just pass"
         pass
 
     def precmd(self, args):
