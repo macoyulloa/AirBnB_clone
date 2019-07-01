@@ -3,27 +3,27 @@
 
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     "Command interpreter"
     prompt = "(hbnb) "
 
     def do_EOF(self, args):
-        "interpreter exit"
+        "EOF command to exit the program\n"
         return(True)
 
     def do_quit(self, args):
-        "interpreter exit" 
+        "Quit command to exit the program\n"
         return(True)
 
     def emptyline(self):
-        "If the user does not digit any command" 
+        "If there is an empty line, just pass"
         pass
 
     def precmd(self, args):
-        "Before execute a method, convert the cmd in lower-case"
+        "Before execute a method, convert the cmds in lower-case"
         args = args.lower()
         return(args)
-
 
 
 if __name__ == '__main__':
