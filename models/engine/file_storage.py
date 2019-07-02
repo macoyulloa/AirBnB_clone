@@ -3,6 +3,14 @@
 import os
 import json
 from pathlib import Path
+#from models.amenity import Amenity
+#from models.base_model import BaseModel
+#from models.city import City
+#from models.place import Place
+#from models.review import Review
+#from models.state import State
+#from models.user import User
+
 
 class FileStorage():
     __file_path = "file.json"
@@ -10,7 +18,7 @@ class FileStorage():
 
     def all(self):
         " return the all dictionary "
-        return self.__objects
+        return FileStorage.__objects
 
     def new(self, obj):
         " sets the object with the key "
@@ -19,11 +27,12 @@ class FileStorage():
 
     def save(self):
         " serializes objects to the JSON file "
+        new_dict = {}
+        for key, value in FileStorage.__objects.items():
+            new_dict[key] = value.to_dict()
         filename = FileStorage.__file_path
         with open(filename, "w") as my_file:
-            objc = my_file.read()
-            for key, value in objc: 
-                json.dumps(my_file)
+            my_file.write(json.dumps(new_dict) + '\n')
 
     def reload(self):
         " deserializes the JSON file to objects "
@@ -37,4 +46,3 @@ class FileStorage():
                     FileStorage.__objects[key] = value["__class__"](**value)
         else:
             pass
-
