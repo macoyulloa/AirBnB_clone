@@ -4,35 +4,37 @@ this is parent class that inherates to the other class
 """
 
 
-import uuid
+from uuid import uuid4
 from datetime import datetime
-#from models import storage
+import models
 import json
 
 
 time = "%Y-%m-%dT%H:%M:%S.%f"
 
-class BaseModel:
+class BaseModel():
     'define the base model class'
-
     def __init__(self, *args, **kwargs):
-        'init with args and kwgards'    
         if kwargs:
-            for key, value in kwargs:
-                if key in "created_at":
-                    self.created_at = datetime.strptime(kwargs[created_at], time)
-                if key in "updated_at":
-                    self.updated_at = datetime.strptime(kwargs[updated_at], time)
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
+                if key == "created_at":
+                    self.created_at = datetime.strptime(kwargs["created_at"], time)
+                if key == "updated_at":
+                    self.updated_at = datetime.strptime(kwargs["updated_at"], time)
+                self.__setattr__(key, value)
         else:
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.now()
- #           storage.new(self)
-  #          storage.save()
-            
+            self.updated_at = datetime.now()
+            models.storage.new(self)
+            models.storage.save()
+
     def save(self):
         'public method for update datetime'
         self.updated_at = datetime.now()
-   #     storage.save()
+        models.storage.save()
 
     def to_dict(self):
         'dictionary format'
