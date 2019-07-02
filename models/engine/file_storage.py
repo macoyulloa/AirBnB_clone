@@ -43,6 +43,6 @@ class FileStorage():
                 objc = my_file.read()
                 new_dic = json.loads(objc)
                 for key, value in new_dic:
-                    FileStorage.__objects[key] = value["__class__"](**value)
+                    FileStorage.__objects[key] = eval(value["__class__"])(value)
         else:
             pass
