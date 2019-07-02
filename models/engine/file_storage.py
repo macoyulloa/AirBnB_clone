@@ -3,13 +3,13 @@
 import os
 import json
 from pathlib import Path
-#from models.amenity import Amenity
-#from models.base_model import BaseModel
-#from models.city import City
-#from models.place import Place
-#from models.review import Review
-#from models.state import State
-#from models.user import User
+from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 
 
 class FileStorage():
@@ -40,9 +40,8 @@ class FileStorage():
         file_exist = Path(filename)
         if file_exist.exists():
             with open(filename, "r") as my_file:
-                objc = my_file.read()
-                new_dic = json.loads(objc)
-                for key, value in new_dic:
-                    FileStorage.__objects[key] = eval(value["__class__"])(value)
+                new_dic = json.load(my_file)
+                for key, value in new_dic.items():
+                    FileStorage.__objects[key] = eval(value["__class__"])(**value)
         else:
             pass
