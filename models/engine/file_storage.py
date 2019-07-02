@@ -32,7 +32,7 @@ class FileStorage():
             new_dict[key] = value.to_dict()
         filename = FileStorage.__file_path
         with open(filename, "w") as my_file:
-            my_file.write(json.dumps(new_dict) + '\n')
+            my_file.write(json.dumps(new_dict))
 
     def reload(self):
         " deserializes the JSON file to objects "
@@ -42,6 +42,6 @@ class FileStorage():
             with open(filename, "r") as my_file:
                 new_dic = json.load(my_file)
                 for key, value in new_dic.items():
-                    FileStorage.__objects[key] = eval(value["__class__"])(**value)
+                    FileStorage.__objects[key] = eval(value["__class__"])(value)
         else:
             pass
