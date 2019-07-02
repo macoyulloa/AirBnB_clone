@@ -6,7 +6,7 @@ this is parent class that inherates to the other class
 
 import uuid
 from datetime import datetime
-from models. import storage
+from models import storage
 import json
 
 
