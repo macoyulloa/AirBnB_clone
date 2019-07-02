@@ -25,6 +25,21 @@ class HBNBCommand(cmd.Cmd):
         args = args.lower()
         return(args)
 
+    def create(self, args):
+        "creates an instance of Base"
+        args = args.split()
+        if len(args) < 1:
+            print("** class name missing **")
+        if args[0] is None:
+            print("** class doesn't exist **")
+        else:
+            
+            
+          
+
+    def destroy(self, args):
+        'destroy an instance'
+        
 
 if __name__ == '__main__':
     prompt = HBNBCommand()
