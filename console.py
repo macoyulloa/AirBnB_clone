@@ -12,11 +12,16 @@ from models.place import Place
 from models.review import Review
 import shlex
 
-dic_class = {'BaseModel': BaseModel, 'User': User, 'State': State, 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review}
+dic_class = {'BaseModel': BaseModel,
+             'User': User, 'State': State,
+             'City': City, 'Amenity': Amenity,
+             'Place': Place, 'Review': Review}
 
-list_class = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+list_class = ["BaseModel", "User", "State",
+              "City", "Amenity", "Place", "Review"]
 
 dic_all = models.storage.all()
+
 
 class HBNBCommand(cmd.Cmd):
     "Command interpreter"
@@ -82,7 +87,6 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
             else:
                 print("** no instance found **")
-        
 
     def do_all(self, args):
         " Prints all string representation of all instances "
@@ -112,7 +116,7 @@ class HBNBCommand(cmd.Cmd):
         elif len(list_arg) == 2:
             print("** attribute name missing **")
         elif len(list_arg) == 3:
-             print("** value missing **")
+            print("** value missing **")
         else:
             key = ''
             key = list_arg[0] + '.' + list_arg[1]
@@ -122,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
                 return
-        
+
 if __name__ == '__main__':
     prompt = HBNBCommand()
     prompt.cmdloop()
