@@ -10,11 +10,13 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
+import shlex
 
 dic_class = {'BaseModel': BaseModel, 'User': User, 'State': State, 'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review}
 
 list_class = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
 
+dic_all = models.storage.all()
 
 class HBNBCommand(cmd.Cmd):
     "Command interpreter"
@@ -98,7 +100,29 @@ class HBNBCommand(cmd.Cmd):
                     if (dic_all[id_key] == args_ls[0]):
                         print(dic_all[id_key])
 
-
+    def do_update(self, args):
+        'update the instance'
+        list_arg = shlex.split(args)
+        if len(list_arg) == 0:
+            print("** class name missing **")
+        elif len(list_arg) == 1 and list_arg[0] not in list_class:
+            print("** class doesn't exist **")
+        elif len(list_arg) == 1:
+            print("** instance id missing **")
+        elif len(list_arg) == 2:
+            print("** attribute name missing **")
+        elif len(list_arg) == 3:
+             print("** value missing **")
+        else:
+            key = ''
+            key = list_arg[0] + '.' + list_arg[1]
+            if key in dic_all:
+                setattr(dic_all[key], list_arg[2], list_arg[3])
+                models.storage.save()
+            else:
+                print("** no instance found **")
+                return
+        
 if __name__ == '__main__':
     prompt = HBNBCommand()
     prompt.cmdloop()
