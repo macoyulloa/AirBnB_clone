@@ -12,13 +12,13 @@ A command interprepart of a computer operating system that understands and execu
 
 This command interpreter could manage the objects of the all projects:
 
- ````
+```
 Create a new object (: a new User or a new Place)
 Retrieve an object from a file, a database etc…
 Do operations on objects (count, compute stats, etc…)
 Update attributes of an object
 Destroy an object
- ```
+```
 
 ## Getting Started
 In order to dowload the program and runs the command interpreter, it is necesary to copy the repository in your computer using the:
