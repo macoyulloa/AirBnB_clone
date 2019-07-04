@@ -42,6 +42,7 @@ class FileStorage():
             with open(filename, "r") as my_file:
                 new_dic = json.load(my_file)
                 for key, value in new_dic.items():
-                    FileStorage.__objects[key] = eval(value["__class__"])(value)
+                    key_dic = FileStorage.__objects
+                    key_dic[key] = eval(value["__class__"])(**value)
         else:
             pass
