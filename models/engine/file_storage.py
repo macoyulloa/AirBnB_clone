@@ -29,7 +29,7 @@ class FileStorage():
         " serializes objects to the JSON file "
         new_dict = {}
         for key, value in FileStorage.__objects.items():
-            new_dict[key] = value.to_dict()
+            new_dict[key] = BaseModel.to_dict(value)
         filename = FileStorage.__file_path
         with open(filename, "w") as my_file:
             my_file.write(json.dumps(new_dict))
