@@ -92,17 +92,21 @@ class HBNBCommand(cmd.Cmd):
         " Prints all string representation of all instances "
         args_ls = args.split()
         dic_all = models.storage.all()
+        ls_values = []
 
         if len(args_ls) == 0:
-            for key in dic_all.keys():
-                print(dic_all[key])
+            for value in dic_all.values():
+                ls_values.append(str(value))
+                print(ls_values)
         else:
             if len(args_ls) == 1 and args_ls[0] not in list_class:
                 print("** class doesn't exist **")
             else:
-                for id_key in dic_all.keys():
-                    if (dic_all[id_key] == args_ls[0]):
-                        print(dic_all[id_key])
+                for key, values in dic_all.items():
+                    token = key.split('.')
+                    if (token[0] == args_ls[0]):
+                        ls_values.append(str(values))
+                print(ls_values)
 
     def do_update(self, args):
         'update the instance'

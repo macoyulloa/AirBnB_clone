@@ -23,16 +23,16 @@ class BaseModel():
                 if key == "created_at":
                     self.created_at = datetime.strptime
                     (kwargs["created_at"], time)
-                if key == "updated_at":
+                elif key == "updated_at":
                     self.updated_at = datetime.strptime
                     (kwargs["updated_at"], time)
-                self.__setattr__(key, value)
+                else:
+                    self.__setattr__(key, value)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             models.storage.new(self)
-            models.storage.save()
 
     def save(self):
         'public method for update datetime'
