@@ -2,16 +2,15 @@
 import unittest
 import pep8
 from models.base_model import BaseModel
-from models.__init__ import storage
-from models.engine.file_storage import FileStorage
-import os
+from datetime import datetime
+from models import storage
 
 def setUpModule():
-        print("setup module")
+    pass
 
 
 def tearDownModule():
-        print("teardown module")
+    pass
 
 
 class TestStringMethods(unittest.TestCase):
@@ -34,44 +33,42 @@ class test_class_instance(unittest.TestCase):
         pass
 
     @classmethod
-    def setUpClass():
+    def setUpClass(cls):
         print("setUpClass")
 
     @classmethod
     def tearDownClass(cls):
         pass
 
-    def documentation(self):
+    def test_documentation(self):
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.__init__.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
         self.assertIsNotNone(BaseModel.__str__.__doc__)
         self.assertIsNotNone(BaseModel.to_dict.__doc__)
 
-    def number(self):
+    def test_number(self):
         self.dupmodel.my_number = 398
         self.assertEqual(self.dupmodel.my_number, 398)
 
-    def name(self):
+    def test_name(self):
         self.dupmodel.name = "Hello"
         self.assertEqual(self.dupmodel.name, "Hello")
 
-    def instances(self):
-        self.dupmodel.save()
-        self.assertTrue(os.path.isflie('file.json')
+    def test_instances(self):
         self.assertTrue(hasattr(self.dupmodel, "__init__"))
         self.assertTrue(hasattr(self.dupmodel, "save"))
         self.assertTrue(hasattr(self.dupmodel, "__str__"))
         self.assertTrue(hasattr(self.dupmodel, "to_dict"))
 
-    def save(self):
+    def test_save(self):
         self.dupmodel.name = "Hello"
-        self.dupmodel.save()
         storage.reload()
         self.assertTrue(storage.all(), "Hello")
         self.assertTrue(hasattr(self.dupmodel, 'save'))
-        self.assertTrue(hasattr(self.dupmodel.created_at,
-                                self.dupmodel.updated_at))
+        
+    def test_instance2(self):
+        self.assertIsInstance(self.dupmodel, BaseModel)
 
 if __name__ == '__main__':
     unittest.main()

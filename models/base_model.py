@@ -16,6 +16,7 @@ time = "%Y-%m-%dT%H:%M:%S.%f"
 class BaseModel():
     'define the base model class'
     def __init__(self, *args, **kwargs):
+        'init with args and kwargs'
         if kwargs:
             for key, value in kwargs.items():
                 if key == "__class__":
