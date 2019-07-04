@@ -112,21 +112,59 @@ Ex: $ update BaseMo-1234-1234 email "aibnb@holbertonschool.com"
 
 ##### cd command
 
-The 'cd' commnad let us change the current directory.
-```
+How like looks the console:
 
+![](console.PNG)
 
-```
+Using the create command:
 
-### How it looks in the Command Interpreter
+![](create.PNG)
 
-![](ls.png)
+Using the show command:
 
-![](ejem_env_pwd_cd_exit.png)
+![](show.PNG)
+
+Using the all command:
+
+![](all.PNG)
 
 ### GLOSARY & IMPORTANT DEFINITIONS
 
-#### PRIMAR
+#### Storage 
+
+Why separate “storage management” from “model”? It’s to make your models modular and independent. With this architecture, you can easily replace your storage system without re-coding everything everywhere.
+
+You will always use class attributes for any oct. Why not instance attributes? For 3 reasons:
+
+Provide easy class description: everybody will be able to see quickly what a model should contain (which attributes, etc…)
+Provide default value of any attribute
+In the future, provide the same model behavior for file storage or database storage
+
+#### File storage == JSON serialization
+
+For this first step, y write in a file all your objects/instances created/updated in your command interpreter and restore them when you start it. You can’t store and restore a Python instance of a class as “Bytes”, the only way is to convert it to a serializable data structure:
+
+convert an instance to Python built in serializable data structure (list, dict, number and string) - for us it will be the method my_instance.to_json() to retrieve a dictionary
+convert this data structure to a string (JSON format, but it can be YAML, XML, CSV…) - for us it will be a my_string = JSON.dumps(my_dict)
+write this string to a file on disk
+And the process of deserialization?
+
+The same but in the other way:
+
+read a string from a file on disk
+convert this string to a data structure. This string is a JSON representation, so it’s easy to convert - for us it will be a my_dict = JSON.loads(my_string)
+convert this data structure to instance - for us it will be a my_instance = MyObject(my_dict)
+
+#### *args, **kwargs
+
+*args and **kwargs are mostly used in function definitions. *args and **kwargs allow you to pass a variable number of arguments to a function. What does variable mean here is that you do not know before hand that how many arguments can be passed to your function by the user so in this case you use these two keywords. *args is used to send a non-keyworded variable length argument list to the function. 
+
+#### datetime
+
+datetime is a Python module to manipulate date, time etc…
+
+In this example, you create an instance of datetime with the current date and time
+
 
 ## Authors
 * **Mariana Plazas** - [marianaplazas]
