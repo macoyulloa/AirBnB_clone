@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 from datetime import datetime
 from models import storage
 
+
 def setUpModule():
     pass
 
@@ -19,7 +20,7 @@ class TestStringMethods(unittest.TestCase):
         file1 = "models/base_model.py"
         file2 = "tests/test_model/test_base_model.py"
         check = style.check_files([file1, file2])
-        self.assertEqual(check.total_errors, 0, 
+        self.assertEqual(check.total_errors, 0,
                          "Found code style errors (and warning).")
 
 
@@ -67,7 +68,7 @@ class test_class_instance(unittest.TestCase):
         print(storage.all())
         self.assertTrue(storage.all(), "Hello")
         self.assertTrue(hasattr(self.dupmodel, 'save'))
-        
+
     def test_instance2(self):
         self.assertIsInstance(self.dupmodel, BaseModel)
 
