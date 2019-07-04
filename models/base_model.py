@@ -22,11 +22,11 @@ class BaseModel():
                 if key == "__class__":
                     continue
                 if key == "created_at":
-                    self.created_at = datetime.strptime
-                    (kwargs["created_at"], time)
+                    self.created_at = (datetime.strptime
+                    (kwargs["created_at"], time))
                 elif key == "updated_at":
-                    self.updated_at = datetime.strptime
-                    (kwargs["updated_at"], time)
+                    self.updated_at = (datetime.strptime
+                    (kwargs["updated_at"], time))
                 else:
                     self.__setattr__(key, value)
         else:
