@@ -14,7 +14,7 @@ def tearDownModule():
 
 
 class TestStringMethods(unittest.TestCase):
-    def pep(self):
+    def test_pep(self):
         style = pep8.StyleGuide(quiet=True)
         file1 = "models/base_model.py"
         file2 = "tests/test_model/test_base_model.py"
@@ -64,6 +64,7 @@ class test_class_instance(unittest.TestCase):
     def test_save(self):
         self.dupmodel.name = "Hello"
         storage.reload()
+        print(storage.all())
         self.assertTrue(storage.all(), "Hello")
         self.assertTrue(hasattr(self.dupmodel, 'save'))
         
