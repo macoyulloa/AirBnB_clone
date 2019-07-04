@@ -4,7 +4,7 @@ import pep8
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.engine.file_storage import FileStorage
-
+import os
 
 def setUpModule():
         print("setup module")
@@ -57,6 +57,8 @@ class test_class_instance(unittest.TestCase):
         self.assertEqual(self.dupmodel.name, "Hello")
 
     def instances(self):
+        self.dupmodel.save()
+        self.assertTrue(os.path.isflie('file.json')
         self.assertTrue(hasattr(self.dupmodel, "__init__"))
         self.assertTrue(hasattr(self.dupmodel, "save"))
         self.assertTrue(hasattr(self.dupmodel, "__str__"))
