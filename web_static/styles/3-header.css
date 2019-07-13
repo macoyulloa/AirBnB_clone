@@ -4,3 +4,9 @@ header {
     height:70px;
     width:100%;
 }
+
+.logo {
+    left:20px;
+    position:absolute;
+    height:60px;  
+}
