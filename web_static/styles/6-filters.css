@@ -52,9 +52,7 @@
     border:1px solid #DDDDDD;
     border-radius:4px;
     display:none;
-    margin-right:none;
-    margin-left:none;
-    margin:0;
+    margin-left:-41px;
 }
 .filters .locations:hover .popover,
 .filters .amenities:hover .popover {
