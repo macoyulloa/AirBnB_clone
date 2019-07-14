@@ -4,10 +4,9 @@
     width:100%;
     border:1px #DDDDDD solid;
     border-radius:4px;
-    display:flex;
     align-items:center;
     justify-content: flex-end;
-    position:absolute;
+    position:relative;
 }
 
 .filters button {
@@ -18,8 +17,8 @@
     width:20%;
     border:none;
     border-radius:4px;
-    right:30px;
     float:right;
+    right:30px;
 }
 
 .filters button:hover {
