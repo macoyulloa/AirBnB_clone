@@ -6,6 +6,8 @@
     border-radius:4px;
     display:flex;
     align-items:center;
+    justify-content: flex-end;
+    position:absolute;
 }
 
 .filters button {
@@ -17,6 +19,8 @@
     border:none;
     border-radius:4px;
     margin-right:30px;
+    position:absolute;
+    float:right;
 }
 
 .filters button:hover {
