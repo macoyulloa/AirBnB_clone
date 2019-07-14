@@ -54,6 +54,7 @@
     display:none;
     position:absolute;
     padding:0;
+    margin:0;
 }
 .filters .locations:hover .popover,
 .filters .amenities:hover .popover {
@@ -64,5 +65,5 @@ display:block;
     margin:0;
 }
 .popover li {
-    margin:12px;
+    margin:15px;
 }
