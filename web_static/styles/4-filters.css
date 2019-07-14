@@ -4,7 +4,8 @@
     width:100%;
     border:1px #DDDDDD solid;
     border-radius:4px;
-    align-items:center;
+    margin-top:4%;
+    justify-content: flex-end; 
 }
 
 .filters button {
