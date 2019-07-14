@@ -1,6 +1,6 @@
 header {
     background-color:white;
-    bottom-border:1px #CCCCCC;
+    bottom-border:1px #CCCCCC solid;
     height:70px;
     width:100%;
 }
