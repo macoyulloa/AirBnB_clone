@@ -52,8 +52,13 @@
     border:1px solid #DDDDDD;
     border-radius:4px;
     display:none;
+    padding:0;
+    margin:0;
 }
-.filters .locations:hover .popover, .amenities:hover .popover {display:block;}
+.filters .locations:hover .popover,
+.filters .amenities:hover .popover {
+display:block;
+}
 .filters ul {
     list-style:none;
     margin:0;
