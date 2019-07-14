@@ -52,8 +52,8 @@
     border:1px solid #DDDDDD;
     border-radius:4px;
     display:none;
-    position:absolute;
-    padding:0;
+    margin-right:none;
+    margin-left:none;
     margin:0;
 }
 .filters .locations:hover .popover,
