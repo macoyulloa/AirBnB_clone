@@ -1,12 +1,11 @@
 header {
     background-color:white;
-    bottom-border:1px #CCCCCC solid;
+    border-bottom:1px #CCCCCC solid;
     height:70px;
     width:100%;
 }
 
 .logo {
     left:20px;
-    position:absolute;
     height:70px;  
 }
