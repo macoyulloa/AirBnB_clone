@@ -1,15 +1,21 @@
 .places {
-    align:top left;
-    font-size:30px;
+    text-align:center;
+    margin:0;
 }
 .places .article {
     width:390px;
     padding:20px;
     margin:20px;
-    border:#FF5A5F 1px;
+    border:#FF5A5F solid 1px;
     border-radius:4px;
+    position:relative;
 }
-.places article h2 {
+.places h1 {
+    font-size:30px;
+    vertical-align: top;
+    text-align: left;
+}
+.places h2 {
     font-size:30px;
     text-align:center;
 }
