@@ -35,7 +35,7 @@
     border-top:#DDDDDD 1px solid;
     border-bottom:#DDDDDD 1px solid;
 }
-.information .max_guest {
+.max_guest {
     width:100px;
     background-image: url('../images/icon_group.png');
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@
     padding-top:50px;
     margin:0;
 }
-.information .number_rooms { 
+.number_rooms { 
     width:100px;
     background-image: url('../images/icon_bed.png');
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
     padding-top:50px;
     margin:0;
 }
-.information .number_bathrooms {
+.number_bathrooms {
     width:100%;
     background-image: url('../images/icon_bath.png');
     background-repeat: no-repeat;
@@ -65,5 +65,5 @@
     padding: 10px 0;
 }
 .places .description {
-    text-align:left;
+   text-align:left;
 }
