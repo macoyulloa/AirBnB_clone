@@ -20,12 +20,6 @@
     font-size:30px;
     text-align:center;
 }
-.circle {
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
-
 .places .price_by_night {
     font color:#FF5A5F;
     border: #FF5A5F 4px solid;
@@ -35,7 +29,7 @@
     font-size:30px;
     right:3%;
     top:3%;
-    position:relative; 
+    position:absolute; 
 }
 .information {
     height:80px;
