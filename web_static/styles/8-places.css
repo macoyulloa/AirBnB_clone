@@ -53,6 +53,9 @@
     background-position:center; 
     padding-top:50px;
     display:inline;
+    position:relative;
+    padding-left:20px;
+    padding-right:20px;
 }
 .places .information .number_rooms { 
     width:100%;
@@ -61,6 +64,10 @@
     background-position:center; 
     padding-top:50px;
     display:inline;
+    top:50px;
+    position:relative;
+    padding-left:20px;
+    padding-right:20px;
 }
 .places .information .number_bathrooms {
     width:100%;
@@ -69,6 +76,9 @@
     padding-top:50px;
     background-position:center;
     display:inline;
+    position:relative;
+    padding-left:20px;
+    padding-right:20px;
 }
 .places .user {
     font-weight:bold;
