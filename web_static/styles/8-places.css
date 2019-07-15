@@ -42,7 +42,7 @@
     position:relative;
 }
 .max_guest {
-    width:100%;
+    width:80px;
     background-image: url('../images/icon_group.png');
     background-repeat: no-repeat;
     background-position:center; 
@@ -50,7 +50,7 @@
     display:inline;
 }
 .number_rooms { 
-    width:100%;
+    width:80px;
     background-image: url('../images/icon_bed.png');
     background-repeat: no-repeat;
     background-position:center; 
@@ -58,7 +58,7 @@
     display:inline;
 }
 .number_bathrooms {
-    width:100%;
+    width:80px;
     background-image: url('../images/icon_bath.png');
     background-repeat: no-repeat;
     padding-top:50px;
