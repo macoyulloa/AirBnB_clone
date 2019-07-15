@@ -10,6 +10,7 @@
     border-radius:4px;
     display:inline-block;
     float:none;
+    position:relative;
 }
 .places h1 {
     font-size:30px;
