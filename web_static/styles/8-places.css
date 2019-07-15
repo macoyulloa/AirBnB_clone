@@ -27,16 +27,13 @@
     min-width:60px;
     height:60px;
     font-size:30px;
-    right:7%;
-    top:7%; 
-    position:absolute;
+    right:15px;
+    top:10px; 
 }
 .information {
     height:80px;
     border-top:#DDDDDD 1px solid;
     border-bottom:#DDDDDD 1px solid;
-    align-items:center;
-    position:relative;
 }
 .information .max_guest {
     width:100px;
