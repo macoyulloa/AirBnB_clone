@@ -41,7 +41,7 @@
     background-repeat: no-repeat;
     background-position:center; 
     padding-top:50px;
-    display:inline-block;
+    margin:0;
 }
 .information .number_rooms { 
     width:100px;
@@ -49,7 +49,7 @@
     background-repeat: no-repeat;
     background-position:center; 
     padding-top:50px;
-    display:inline-block;
+    margin:0;
 }
 .information .number_bathrooms {
     width:100%;
@@ -57,7 +57,7 @@
     background-repeat: no-repeat;
     padding-top:50px;
     background-position:center;
-    display:inline-block;
+    margin:0;
 }
 .places .user {
     font-weight:bold;
