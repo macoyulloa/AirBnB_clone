@@ -27,8 +27,8 @@
     min-width:60px;
     height:60px;
     font-size:30px;
-    right:15px;
-    top:10px; 
+    margin-right:3%;
+    margin-top:3%; 
 }
 .information {
     height:80px;
@@ -39,22 +39,25 @@
     width:100px;
     background-image: url('../images/icon_group.png');
     background-repeat: no-repeat;
+    background-position:center; 
     padding-top:50px;
     display:inline-block;
 }
-.information .number_rooms {
-    display:inline-block;
+.information .number_rooms { 
     width:100px;
     background-image: url('../images/icon_bed.png');
     background-repeat: no-repeat;
+    background-position:center; 
     padding-top:50px;
+    display:inline-block;
 }
 .information .number_bathrooms {
-    display:inline-block;
     width:100%;
     background-image: url('../images/icon_bath.png');
     background-repeat: no-repeat;
     padding-top:50px;
+    background-position:center;
+    display:inline-block;
 }
 .places .user {
     font-weight:bold;
