@@ -39,9 +39,10 @@
     height:80px;
     border-top:#DDDDDD 1px solid;
     border-bottom:#DDDDDD 1px solid;
+    position:relative;
 }
 .max_guest {
-    width:100px;
+    width:80px;
     background-image: url('../images/icon_group.png');
     background-repeat: no-repeat;
     background-position:center; 
@@ -50,7 +51,7 @@
     float:left;
 }
 .number_rooms { 
-    width:100px;
+    width:80px;
     background-image: url('../images/icon_bed.png');
     background-repeat: no-repeat;
     background-position:center; 
@@ -59,7 +60,7 @@
     float:left;
 }
 .number_bathrooms {
-    width:100%;
+    width:80px;
     background-image: url('../images/icon_bath.png');
     background-repeat: no-repeat;
     padding-top:50px;
