@@ -40,30 +40,30 @@
     margin-right:auto;
     text-align:center;
 }
-.information {
+.places .information {
     height:80px;
     border-top:#DDDDDD 1px solid;
     border-bottom:#DDDDDD 1px solid;
     position:relative; 
 }
-.max_guest {
-    width:80px;
+.places .information .max_guest {
+    width:100%;
     background-image: url('../images/icon_group.png');
     background-repeat: no-repeat;
     background-position:center; 
     padding-top:50px;
     display:inline;
 }
-.number_rooms { 
-    width:80px;
+.places .information .number_rooms { 
+    width:100%;
     background-image: url('../images/icon_bed.png');
     background-repeat: no-repeat;
     background-position:center; 
     padding-top:50px;
     display:inline;
 }
-.number_bathrooms {
-    width:80px;
+.places .information .number_bathrooms {
+    width:100%;
     background-image: url('../images/icon_bath.png');
     background-repeat: no-repeat;
     padding-top:50px;
